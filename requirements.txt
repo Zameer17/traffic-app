@@ -1,0 +1,9 @@
+streamlit
+folium
+streamlit-folium
+requests
+openrouteservice
+pandas
+scikit-learn
+matplotlib
+seaborn
