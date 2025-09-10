@@ -60,8 +60,8 @@ st.sidebar.markdown(f"*Travel Time Model Accuracy (R²):* {time_r2:.3f}")
 st.sidebar.markdown(f"*Congestion Model Accuracy (R²):* {cong_r2:.3f}")
 
 # API keys
-weather_api_key = "85fe0b9a4d63792ea05a42113978e413"
-ors_api_key = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6Ijc4OWViMGI0MzQ4OTQxMDJiNTVhZmU5ZTUyNWJhNzE3IiwiaCI6Im11cm11cjY0In0="
+weather_api_key = "Your_Key"
+ors_api_key = "Your_Key"
 
 # Get weather
 def get_weather(api_key):
@@ -224,3 +224,4 @@ with col1:
 with col2:
     st.subheader("🗺 Optimized Route Map")
     st_folium(map2, width=700, height=500)
+
