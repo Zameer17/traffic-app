@@ -165,28 +165,6 @@ opt_cong = predict_congestion(opt_dist, opt_time, time_now, day_now, weather_now
 default_pred_time = predict_time(default_dist, default_cong, default_time, time_now, day_now, weather_now) if default_time else 0
 opt_pred_time = predict_time(opt_dist, opt_cong, opt_time, time_now, day_now, weather_now) if opt_time else 0
 
-# -----------------------------
-# 📈 Visualization Section (Strip Style)
-# -----------------------------
-st.markdown("---")
-st.subheader("📊 Travel Time Comparison")
-
-routes = ["Default Route", "Optimized Route"]
-times = [default_pred_time, opt_pred_time]
-
-# Strip-style figure (wide & very short)
-fig, ax = plt.subplots(figsize=(6,1.5))  # width=6, height=1.5 inches
-ax.bar(routes, times, color=["red", "green"])
-
-# Keep labels readable
-ax.set_ylabel("Time (min)", fontsize=8)
-ax.set_title("Travel Time: Default vs Optimized Route", fontsize=10)
-ax.tick_params(axis="x", labelsize=8)
-ax.tick_params(axis="y", labelsize=8)
-
-st.pyplot(fig)
-
-
 # Show results
 col1, col2 = st.columns(2)
 with col1:
@@ -224,4 +202,5 @@ with col1:
 with col2:
     st.subheader("🗺 Optimized Route Map")
     st_folium(map2, width=700, height=500)
+
 
